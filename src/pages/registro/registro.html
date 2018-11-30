@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Registro
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="contenido" padding>
+  
+  <img src="../../assets/imgs/missing.jpg" >
+  <form #forma="ngForm" (ngSubmit)="activacion(forma)">
+      <ion-item class="item-general">
+          <ion-label fixed>Username</ion-label>
+          <ion-input type="text" id="email" name="email" [(ngModel)]="email" placeholder="Introduzca Email"></ion-input>
+        </ion-item>
+        <ion-item class="item-general">
+            <ion-label fixed>Password</ion-label>
+            <ion-input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Password"></ion-input>
+        </ion-item>
+        <ion-item class="item-general">
+          <ion-label fixed>Password</ion-label>
+          <ion-input type="password" id="password2" name="password2" [(ngModel)]="password2" placeholder="Confirmacion"></ion-input>
+      </ion-item>
+        <button ion-button full type="submit"> Enter</button>
+  </form>
+</ion-content>

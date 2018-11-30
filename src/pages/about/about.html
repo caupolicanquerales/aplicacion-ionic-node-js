@@ -1,0 +1,27 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Esto es la prueba</h2>
+
+  <form #forma="ngForm" (ngSubmit)="activacion(forma)">
+      <ion-item>
+          <ion-label fixed>Username</ion-label>
+          <ion-input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" placeholder="Introduzca Nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Password</ion-label>
+            <ion-input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Password"></ion-input>
+        </ion-item>
+        <button ion-button full type="submit"> Enter</button>
+  </form>
+</ion-content>

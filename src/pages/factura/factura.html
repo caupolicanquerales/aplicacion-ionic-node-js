@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Orden:{{numeroOrden}}</ion-title>
+    <ion-buttons end>
+        <button ion-button outline (click)="metodoParaCancelarOrden()">Cancelar Orden</button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content id="contenido" padding>
+  <ion-card *ngFor="let producto of itemFacturados; let i=index">
+    <ion-row>
+      <ion-col col-2 class="uno">
+          <ion-checkbox  color="danger" (ionChange)="itemParaEliminar(producto,$event,i)">
+          </ion-checkbox>
+          <ion-icon name="trash" color="primary"></ion-icon>
+      </ion-col>
+      <ion-col col-6 class="dos">
+        <p class="nombre">{{producto.nombre}}</p>
+      </ion-col>
+      <ion-col col-4 class="tres">
+        <p>Bfs {{producto.precio}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card *ngFor="let costo of costoFacturado">
+    <ion-row>
+      <ion-col col-8>
+        <p>Total </p>
+      </ion-col>
+      <ion-col col-4>
+        <p>Bfs {{costo.totalSinImpuesto}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-8>
+        <p>Impuesto (iva) </p>
+      </ion-col>
+      <ion-col col-4>
+        <p>Bfs {{costo.impuesto}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-8>
+        <p>Total General </p>
+      </ion-col>
+      <ion-col col-4>
+          <p>Bfs {{costo.totalFacturado}}</p>
+      </ion-col>
+    </ion-row> 
+  </ion-card>
+  <ion-card class="cardBotones">
+    <button ion-button class="accion" color="primary" outline (click)="metodoParaProcesarFactura()">Cerrar Orden</button>
+    <button ion-button class="accion" color="secondary" outline (click)="metodoParaActualizarListaCompra()">Actualizar</button>
+  </ion-card>
+</ion-content>

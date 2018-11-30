@@ -1,0 +1,7 @@
+{
+  "name": "cellular",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

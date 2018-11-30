@@ -1,0 +1,22 @@
+page-registro {
+
+    .toolbar-background{ 
+        background: rgb(233, 103, 56);
+    }
+    img{
+        border-radius: 40%;
+        height: 20%;
+        margin: 0 36%;
+    }
+    .item-general{
+        background: rgba(56, 58, 57, 0.8);
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h2{
+        text-align: center;
+    }
+    #contenido{
+        background-color: rgba(7, 7, 7, 0.9);
+    }
+}

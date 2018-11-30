@@ -1,0 +1,24 @@
+<ion-menu [content]="content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content id="contenido">
+      <ion-list >
+        <button ion-item menuClose *ngFor="let page of pages" (click)="openPage(page)" class="items">
+          {{page.title}}
+          <ion-icon item-right name="arrow-forward"></ion-icon>
+        </button>
+        <button ion-item menuClose class="items" (click)="metodoParaCerraSesion()" >
+            Cerrar Sesion
+            <ion-icon item-right name="arrow-forward"></ion-icon>
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+
+<!--<ion-nav [root]="rootPage"></ion-nav>-->

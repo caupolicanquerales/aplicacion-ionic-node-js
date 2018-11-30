@@ -1,0 +1,24 @@
+page-login {
+
+    .toolbar-background{ 
+        background: rgb(233, 103, 56);
+    }
+    h2{
+        text-align: center;
+    }
+    #contenido{
+        background:url(../../assets/imgs/papas.jpg) repeat center;
+        background-color: black;
+    }
+    img{
+        border-radius: 50%;
+        height: 20%;
+        margin: 0 34%;
+    }
+    .item-general{
+        background: rgba(41, 41, 41, 0.8);
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+   
+}

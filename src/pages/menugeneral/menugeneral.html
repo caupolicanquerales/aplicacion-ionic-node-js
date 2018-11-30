@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Menu
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button outline (click)="generarOrden()">Generar Orden</button>
+    </ion-buttons>
+    <ion-buttons end> 
+      <button ion-button (click)="busquedaPorCategoria()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="contenido" padding>
+  
+  <ion-card id="card" *ngFor="let producto of productos">
+
+    <img src="{{producto.imagen}}">
+    <ion-item>
+      <ion-icon name="restaurant" item-start></ion-icon>
+     <!-- <ion-icon name="football" item-start large></ion-icon> -->
+      <h2>{{producto.nombre}}</h2>
+    </ion-item>
+  
+    <ion-item>
+      <ion-icon name="paper" item-start large ></ion-icon>
+      <p>{{producto.descripcion}}</p>
+    </ion-item>
+    
+    <ion-row>
+      <ion-col col-7>
+        <h2>Bfs {{producto.precio}}</h2>
+      </ion-col>
+      <ion-col col-5>
+        <button ion-button icon-start clear small (click)="accionParaOrdenarCompraPorItem(producto)">
+          <ion-icon name="cart"></ion-icon>
+          <div>Ordenar</div>
+        </button>
+      </ion-col>
+    </ion-row>
+    
+  </ion-card>
+
+</ion-content>
